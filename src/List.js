@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { db } from './firebaseconfig';
 import { collection, query, where, getDocs, deleteDoc, doc } from 'firebase/firestore';
+import { Link } from 'react-router-dom';
 import './App.css';
 
 function List() {
@@ -43,6 +44,10 @@ function List() {
                         </li>
                     ))}
                 </ul>
+
+                <Link to="/">
+                    <button className="new-item-btn">Add a new item?</button>
+                </Link>
             </div>
         </div>
     )
