@@ -66,18 +66,20 @@ select {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  word-break: break-word;
 }
 
 .remove-btn {
-  position: relative;
-  right: -13rem;
   padding: 1rem;
   background-color: #585858;
   color: #ffffff;
   border: none;
   border-radius: 10px;
-  width: 5rem;
+  width: 6rem;
   cursor: pointer;
+  margin-left: 8rem;
+  flex-shrink: 0;
 }
 
 .remove-btn:hover {
@@ -97,4 +99,11 @@ select {
 
 .new-item-btn:hover {
   background-color: #4d4d4d;
+}
+
+@media (max-width: 40rem) {
+
+  h1 {
+    font-size: 3.5rem;
+  }
 }
