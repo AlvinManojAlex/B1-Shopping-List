@@ -11,7 +11,7 @@ function FormPage() {
     const handleSubmit = async(e) => {
         e.preventDefault();
 
-        if (!itemName || !tenantName || !purchaseType){
+        if (!itemName){
             alert('Please fill all the details!');
             return;
             }
