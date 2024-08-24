@@ -9,7 +9,7 @@ function List() {
 
     useEffect(() => {
         const fetchCommonItems = async () => {
-            const q = query(collection(db, 'shoppingList'), where('purchaseType', '==', 'common'));
+            const q = query(collection(db, 'shoppingList'));
             const querySnapshot = await getDocs(q);
             const itemList = querySnapshot.docs.map(doc => ({id: doc.id, ...doc.data() }));
             setItems(itemList);

@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 
 function FormPage() {
     const [itemName, setItemName] = useState('');
-    const [tenantName, setTenantName] = useState('');
-    const [purchaseType, setPurchaseType] = useState('');
 
     const handleSubmit = async(e) => {
         e.preventDefault();
@@ -19,16 +17,12 @@ function FormPage() {
             try {
                 const docRef = await addDoc(collection(db, 'shoppingList'), {
                     itemName,
-                    tenantName,
-                    purchaseType,
                     purchased: "no"
                 })
 
                 console.log('Document written');
 
                 setItemName('');
-                setTenantName('');
-                setPurchaseType('');
             }
             catch(error) {
                 console.log('Error adding document ', error);
