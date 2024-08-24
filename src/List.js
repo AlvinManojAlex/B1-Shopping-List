@@ -23,7 +23,7 @@ function List() {
             await deleteDoc(doc(db, 'shoppingList', itemId))
 
             // Updating the local state to remove the item
-            setItems(items.filter(item => item.id !== itemId))
+            setItems(items.filter(item => item.id !== itemId));
         }
         catch(error) {
             console.log('Error in deleting doc');

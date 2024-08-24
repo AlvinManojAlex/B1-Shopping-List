@@ -47,25 +47,6 @@ function FormPage() {
                 value={itemName}
                 onChange={(e) => setItemName(e.target.value)} />
 
-            <select
-                value={tenantName}
-                onChange={(e) => setTenantName(e.target.value)}>
-                <option value=''>Select tenant</option>
-                <option value='Alvin'>Alvin</option>
-                <option value='Arnav'>Arnav</option>
-                <option value='Aryan'>Aryan</option>
-                <option value='Ishit'>Ishit</option>
-                <option value='Mohit'>Mohit</option>
-            </select>
-
-            <select
-                value={purchaseType}
-                onChange={(e) => setPurchaseType(e.target.value)}>
-                <option value=''>Select type</option>
-                <option value='personal'>Personal</option>
-                <option value='common'>Common for apartment</option>
-            </select>
-
             <button className='submit-btn' onClick={handleSubmit} >
                 Submit Item
             </button>
