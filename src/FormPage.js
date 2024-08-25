@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { db } from './firebaseconfig';
+import { db } from './firebaseConfig_vercel';
 import { collection, addDoc } from 'firebase/firestore';
 import { Link } from 'react-router-dom';
 
